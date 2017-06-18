@@ -82,9 +82,7 @@ void TimedTask::check_iterations() {
     }
     if (_iterations == 0) {
       active(false);
-      Serial.print("Disable func :");
-      Serial.println(active());
-    }
+      }
   }
 }
 
