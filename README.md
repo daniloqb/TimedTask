@@ -62,17 +62,17 @@ There are more examples how to use all the functionalities of the library. See t
 
 * Enable or disable a task
 
-Use **active()** function. Without parameter this function returns the task state. To Enable or Disable the task, you need to pass, **true** or **false**.
+Use **active()** function. Without parameter this function returns the task state. To Enable or Disable the task, you need to pass **true** or **false**.
 
 ```c++
 task.active(); //returns the task state
 
 task.active(false); // make the function execution stops.
-task.active(true);  ;; function returns to it's normal execution.
+task.active(true);  // function returns to it's normal execution.
 
 ```
 
-* Change the frequency of execution
+* Change the frequency of execution.
 
 Use **interval()**. Without parameter this functions returns the actual interval of execution. Set the function interval, passing a **long** as parameter.
 
