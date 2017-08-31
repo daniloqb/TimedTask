@@ -33,6 +33,7 @@ class TimedTask {
 
   public:
     TimedTask(void (*func)(), unsigned long interval_);
+    TimedTask(void (*func)(), unsigned long interval_, int start);
     void run();
     void disable_iterations();
     boolean active();

@@ -29,6 +29,24 @@ TimedTask::TimedTask(void (*func)(), unsigned long interval_) {
 
 }
 
+TimedTask::TimedTask(void (*func)(), unsigned long interval_, int start) {
+
+  _interval = interval_;
+  _function = func;
+
+  _active = 1;
+  _iterations = -1;
+  _check_iterations = false;
+
+  if (start > 0){
+  _previous_run = 0;
+  _previous_run = millis() * start;
+  }
+
+}
+
+
+
 void TimedTask::run() {
   unsigned long current_run = millis();
 
@@ -51,6 +69,7 @@ boolean TimedTask::active() {
 }
 
 boolean TimedTask::active(boolean act) {
+  _previous_run = millis();
   _active = act;
 }
 
